@@ -1,0 +1,11 @@
+<h1>Restaurants</h1>
+<div class="restaurant">
+  <% @restaurants.each do |resto| %>
+    <h2><%= link_to resto.name, "restaurants/#{resto.id}" %></h2>
+    <h3>Cuisine: <%= resto.category %></h3>
+    <p><%= resto.address %></p>
+    <p><%= resto.phone_number %></p>
+  <% end  %>
+</div>
+
+<%= link_to 'New Restaurant', 'restaurants/new', class: 'btn btn-success' %>
